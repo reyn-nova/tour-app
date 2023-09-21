@@ -14,7 +14,11 @@ import PersonalInformation from './screens/Personal Information';
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator
+        screenOptions={{
+          header: () => null,
+        }}
+        initialRouteName="Login">
         <Stack.Screen name="BottomTabs" component={BottomTabs} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="DestinationDetail" component={DestinationDetail} />

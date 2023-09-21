@@ -9,7 +9,10 @@ const ReactNavigationBottomTabs = createBottomTabNavigator();
 
 const BottomTabs = () => {
   return (
-    <ReactNavigationBottomTabs.Navigator>
+    <ReactNavigationBottomTabs.Navigator
+      screenOptions={{
+        header: () => null,
+      }}>
       <ReactNavigationBottomTabs.Screen name="Home" component={Home} />
 
       <ReactNavigationBottomTabs.Screen name="MyOrders" component={MyOrders} />
@@ -18,4 +21,3 @@ const BottomTabs = () => {
 };
 
 export default BottomTabs;
-// DestinationDetail, OrderSuccess, PersonalInformation
